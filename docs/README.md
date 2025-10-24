@@ -7,15 +7,11 @@ A real-time, multiplayer Bingo game you can play in the terminal. Players join r
 ## Features
 
 * **Realtime multiplayer** with rooms/lobbies
-* **Unique bingo cards** per player, free center optional
-* **Auto-caller** or **manual host** mode
-* **Line detection**: rows, columns, diagonals; configurable win patterns
-* **Spectator mode** and host transfer
-* **Chat** (room-level) and emojis
-* **Mobile-first UI**, keyboard and screen reader friendly
-* **Persistence** with reconnect support
-* **Private rooms** with PINs, public rooms with codes
-* **Anti-cheat** server-side validation
+* **Authentic bingo cards** Unique 5×5 cards per player
+* **Number calling** Auto-caller for random numbers
+* **Line detection**: rows, columns, diagonals; configured win patterns
+* **Marking and validation** Mark only called numbers
+* **Accessibility and UX** User friendly design
 
 ---
 
