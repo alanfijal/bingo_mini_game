@@ -4,8 +4,7 @@ class BingoCard:
         self.bingo_card = [[None for _ in range(5)] for _ in range(5)]
         self.generate_card()
 
-    @property
-    def card(self):
+    def bingo_card(self):
         # backward compatibility for tests/other code expecting .card
         return self.bingo_card
 
