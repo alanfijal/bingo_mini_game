@@ -11,7 +11,7 @@ A real-time, multiplayer Bingo game you can play in the terminal. Players join r
 * **Number calling** Auto-caller for random numbers
 * **Line detection**: rows, columns, diagonals; configured win patterns
 * **Marking and validation** Mark only called numbers
-* **Accessibility and UX** User friendly design
+* **Accessibility and UX** Usergit  friendly design
 
 ---
 
