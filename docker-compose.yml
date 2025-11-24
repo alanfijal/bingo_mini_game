@@ -1,0 +1,46 @@
+services:
+  bingo-server:
+    build: .
+    container_name: bingo-server
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - bingo-network
+    depends_on:
+      - redis
+    volumes:
+      - bingo-logs:/app/logs
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: bingo-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - bingo-network
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+  bingo-client:
+    build: .
+    command: python /app/src/interfaces/multiplayer_cli.py ws://bingo-server:8000
+    stdin_open: true
+    tty: true
+    networks:
+      - bingo-network
+    depends_on:
+      - bingo-server
+    profiles:
+      - client  
+networks:
+  bingo-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  bingo-logs:

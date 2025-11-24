@@ -57,3 +57,10 @@ class BingoCard:
             bool: True if the number is marked, False otherwise
         """
         return number in self.marked
+
+    def reset(self):
+        """
+        Reset the card by generating a new card and clearing marks.
+        """
+        self.marked = set()
+        self.generate_card()
